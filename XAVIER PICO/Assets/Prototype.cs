@@ -46,6 +46,8 @@ public class Prototype : MonoBehaviour
     public float scaleTime = 0.3f;
     [Range(2,20)]
     public int scaleMax = 10;
+    
+
 
 
     public bool isShowing = false;
