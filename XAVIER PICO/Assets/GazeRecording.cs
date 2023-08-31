@@ -10,12 +10,12 @@ public class GazeRecording : MonoBehaviour
     RaycastHit hit;
     Ray ray ;
 
-    public GameObject Target ;
+    public GameObject Target ; //object used as crosshair
 
-    public bool targetOn  =true; 
-
-    public TextMeshProUGUI values_hit ;
-    public TextMeshProUGUI values_screen;
+    public bool targetOn  =false;  // debug tool to see where the Eyegaze is hitting 
+    //debug label to see hit values on screen
+    public TextMeshProUGUI values_hit ;  //hit position on world
+    public TextMeshProUGUI values_screen; //hit position translated to coordinates
 
     public Vector3 gazeHit ; 
 
@@ -60,16 +60,16 @@ public class GazeRecording : MonoBehaviour
     }
 
 
-    // For social use cases, data in local space may be easier to work with
-    var eyeTrackingDataLocal = TobiiXR.GetEyeTrackingData(TobiiXR_TrackingSpace.Local);
+    // // For social use cases, data in local space may be easier to work with
+    // var eyeTrackingDataLocal = TobiiXR.GetEyeTrackingData(TobiiXR_TrackingSpace.Local);
 
-    // The EyeBlinking bool is true when the eye is closed
-    var isLeftEyeBlinking = eyeTrackingDataLocal.IsLeftEyeBlinking;
-    var isRightEyeBlinking = eyeTrackingDataLocal.IsRightEyeBlinking;
+    // // The EyeBlinking bool is true when the eye is closed
+    // var isLeftEyeBlinking = eyeTrackingDataLocal.IsLeftEyeBlinking;
+    // var isRightEyeBlinking = eyeTrackingDataLocal.IsRightEyeBlinking;
 
-    // Using gaze direction in local space makes it easier to apply a local rotation
-    // to your virtual eye balls.
-    var eyesDirection = eyeTrackingDataLocal.GazeRay.Direction;
+    // // Using gaze direction in local space makes it easier to apply a local rotation
+    // // to your virtual eye balls.
+    // var eyesDirection = eyeTrackingDataLocal.GazeRay.Direction;
 
 
     

@@ -12,7 +12,7 @@ public class Logging : MonoBehaviour
     public Prototype prototype ; 
     public GazeRecording gazeRecording;
 
-    public string taskNumber;
+    public string taskNumber ="0.0";
     public int UserId;
 
     public TextMeshPro userIdText;

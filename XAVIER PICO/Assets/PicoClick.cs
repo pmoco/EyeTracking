@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.XR;
-using Tobii.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.UI;
 using TMPro;
@@ -8,11 +7,10 @@ using TMPro;
 
 public class PicoClick : MonoBehaviour
 {
-    public XRNode inputSource = XRNode.RightHand; // Choose the input source (RightHand or LeftHand)
-    public GameObject raycastOrigin; // The game object representing the HMD center (usually set to the HMD GameObject)
-
-    private XRRayInteractor rayInteractor;
-    private bool isRaycasting = false;
+     // Choose the input source (RightHand or LeftHand)
+   
+    // private XRRayInteractor rayInteractor;
+    // private bool isRaycasting = false;
 
     public bool on = true;
 
@@ -37,7 +35,7 @@ public class PicoClick : MonoBehaviour
 
     void Start()
     {
-        rayInteractor = GetComponent<XRRayInteractor>();
+        //rayInteractor = GetComponent<XRRayInteractor>();
 
         TurnOn();
     }
@@ -65,10 +63,10 @@ public class PicoClick : MonoBehaviour
 
             RaycastHit hit;
 
-        Vector3 screenCenter = new Vector3(0.5f, 0.5f, 0f);
+            Vector3 screenCenter = new Vector3(0.5f, 0.5f, 0f);
 
-        // Cast a ray from the center of the screen
-        Ray ray = Camera.main.ViewportPointToRay(screenCenter);
+            // Cast a ray from the center of the screen
+            Ray ray = Camera.main.ViewportPointToRay(screenCenter);
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -144,21 +142,16 @@ public class PicoClick : MonoBehaviour
                     hit.collider.GetComponent<Button>().onClick.Invoke();
 
                     // Set a flag to indicate that a raycast is already being performed
-                    isRaycasting = true;
+                    //isRaycasting = true;
                 }
                 else {
                     LOG.SetText("hit n Miss : " + hit.collider.tag);
                 }
 
-
-
-
     }
 
     public void TurnOn (){
         on = true;
-
-
         }
 
     public void TurnOff(){
