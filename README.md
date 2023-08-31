@@ -12,6 +12,10 @@ you can find Documentations in the /EyeTracking/Documentation folder inside you 
 >Pico SDK Instalation.pdf  #simple guide to the instalation of the SDK
 
 
+SETUP the Unity,  the project is inside the \EyeTracking\XAVIER PICO\ folder, 
+when using the Unity Hub to acess the project connect it to this folder.
+
+
 Testing and using current version : 
 there is a APK already in the \EyeTracking\XAVIER PICO\ folder named "XavierPicoEyeTrackingTest.apk"  
 you can install this apk on a PICO 3 to test. 
